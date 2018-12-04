@@ -1,0 +1,75 @@
+@import "fonts";
+@import "smart-grid";
+
+@mixin font-montserrat($size, $color, $font-weight) {
+  font-size: $size;
+  font-family: $font-montserrat;
+  font-weight: $font-weight;
+  color: $color;
+}
+
+@mixin font-kaushan($size, $color, $font-weight) {
+  font-size: $size;
+  font-family: $font-kaushan;
+  font-weight: $font-weight;
+  color: $color;
+}
+
+@mixin font-roboto($size, $color, $font-weight) {
+  font-size: $size;
+  font-family: $font-roboto;
+  font-weight: $font-weight;
+  color: $color;
+}
+
+@mixin section-bg($imageUrl) {
+  margin-top: 100px;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  background: {
+    image: url('#{$imageUrl}');
+    size: cover;
+    position: center;
+  }
+}
+
+@mixin list-item($size-default, $size-sm, $size-xs) {
+  padding-top: 15px;
+  display: flex;
+  @include col;
+  @include size($size-default);
+  @include size-sm($size-sm);
+  @include size-xs($size-xs);
+}
+
+@mixin avatar-size-fixed($size){
+  height: $size;
+  width: $size;
+  border-radius: $size;
+}
+
+%filter {
+  background-color: rgba(255, 255, 255, 0.856);
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+%list {
+  padding-top: 30px;
+  @include row-flex();
+  justify-content: space-between;
+}
+
+%list-item-content {
+  padding: 0px 10px;
+  span {
+    @include font-montserrat(14px, black, 500);
+    text-transform: uppercase;
+  }
+  p {
+    @include font-roboto(15px, rgba(136, 136, 136, 0.774), 500);
+    line-height: 1.6em;
+  }
+}
