@@ -125,11 +125,13 @@ html {
   background-position: center;
   background-size: cover;
   height: 100%;
+  min-height: 620px;
 }
 .banner .banner-filter {
   flex: 1;
   background: #f38181;
   background: linear-gradient(to top, #fce38abe, #f38181);
+  position: relative;
 }
 .banner .banner-content {
   max-width: 1200px;
@@ -280,10 +282,10 @@ html {
   flex-wrap: wrap;
   margin-left: -15px;
   margin-right: -15px;
-  padding-top: 15%;
+  padding-top: 100px;
   flex-direction: column;
   justify-content: center;
-  top: 20%;
+  top: 10%;
   text-align: center;
 }
 .banner .banner-text .banner-text-first {
@@ -311,7 +313,7 @@ html {
   }
 }
 .banner .banner-learn {
-  margin-top: 150px;
+  margin-top: 15%;
   padding-top: 50px;
   position: relative;
   text-align: center;
