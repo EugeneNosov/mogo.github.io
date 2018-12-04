@@ -876,7 +876,7 @@ html {
   @include xs(flex-direction, column-reverse);
   margin: 0 auto;
   margin-top: 50px;
-  padding-top: 20px;
+  padding: 20px 0;
   form {
     display: flex;
     flex-wrap: wrap;
